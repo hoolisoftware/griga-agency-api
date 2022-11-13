@@ -7,6 +7,8 @@ class StackItem(models.Model):
         verbose_name_plural = 'технологии'
     def __repr__(self):
         return f'{self.title}'
+    def __str__(self):
+        return f'{self.title}'
 
 class Project(models.Model):
     image = models.ImageField('изображение',upload_to='projects/image/')
@@ -18,4 +20,6 @@ class Project(models.Model):
         verbose_name = 'проект'
         verbose_name_plural = 'проекты'
     def __repr__(self):
+        return f'{self.link_github}'
+    def __str__(self):
         return f'{self.link_github}'
