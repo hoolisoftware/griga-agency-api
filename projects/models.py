@@ -11,6 +11,7 @@ class StackItem(models.Model):
         return f'{self.title}'
 
 class Project(models.Model):
+    title = models.CharField('название проекта',max_length=255)
     image = models.ImageField('изображение',upload_to='projects/image/')
     link = models.URLField('ссылка на проект')
     stack = models.ManyToManyField(verbose_name='стек технологий',to=StackItem)
