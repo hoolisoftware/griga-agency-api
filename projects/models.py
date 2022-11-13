@@ -21,6 +21,6 @@ class Project(models.Model):
         verbose_name = 'проект'
         verbose_name_plural = 'проекты'
     def __repr__(self):
-        return f'{self.link_github}'
+        return f'{self.title} - {self.link_github}'
     def __str__(self):
-        return f'{self.link_github}'
+        return f'{self.title} - {self.link_github}'
