@@ -2,10 +2,11 @@ from django.db import models
 
 class StackItem(models.Model):
     title = models.CharField('название технологии',max_length=55)
-
     class Meta:
         verbose_name = 'технология'
         verbose_name_plural = 'технологии'
+    def __repr__(self):
+        return f'{self.title}'
 
 class Project(models.Model):
     image = models.ImageField('изображение',upload_to='projects/image/')
@@ -16,3 +17,5 @@ class Project(models.Model):
     class Meta:
         verbose_name = 'проект'
         verbose_name_plural = 'проекты'
+    def __repr__(self):
+        return f'{self.link_github}'
