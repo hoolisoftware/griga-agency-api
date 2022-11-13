@@ -11,6 +11,7 @@ class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Project
         fields = (
+            'title',
             'link',
             'link_github',
             'image',
