@@ -5,11 +5,8 @@ SECRET_KEY = 'django-insecure-t5b)$nm8-1f#uesa47ov4@(sg^xarxn5ksz*emp(==65ai47xm
 
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    '*',
-    'https://api.griga.shop',
-]
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+ALLOWED_HOSTS = ['*']
+CSRF_TRUSTED_ORIGINS = ['*']
 
 INSTALLED_APPS = [
     'rest_framework',
