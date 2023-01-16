@@ -9,6 +9,7 @@ ALLOWED_HOSTS = [
     '*',
     'https://api.griga.shop',
 ]
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 INSTALLED_APPS = [
     'rest_framework',
